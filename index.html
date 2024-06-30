@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie</title>
+    <!-- CSS only -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <label for="chek"><i class="fa-solid fa-bars"></i></label>
+        <h1 class="logo">Foodie</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#recipes">Recipes</a>
+            <a href="#favoriteRecipes">Favorite Recipes</a>
+        </nav>
+        
+    </header>
+
+    <section id="home">
+        <div class="content">
+            <h1>Discover Our Foods</h1>
+            <p>Cook better recipes with better ingredients</p>
+            <a href="#recipes" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <div id="recipes" class="container mt-4">
+        <h1 class="headName">Recipes</h1>
+        <form action="">
+            <div class="form-group">
+                <label for="ingredient">Choose ingredients:</label>
+                <h2 class="ingredients-title">Choose ingredients to make delicious recipes...</h2>
+                <select class="form-control" id="ingredient" name="ingredient" multiple>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Eggs">Eggs</option>
+                    <option value="Fish">Fish</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Spices And Herbs">Spices And Herbs</option>
+                    <option value="Milk">Milk</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Cereals And Pulses">Cereals And Pulses</option>
+                </select>
+            </div>
+            <div class="filter">
+                <div class="filter__row">
+                    <div class="filter__control">
+                        <label for="cuisine">Cuisine:</label>
+                        <select class="form-control" id="cuisine" name="cuisine">
+                            <option value="">Any</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Mexican">Mexican</option>
+                            <option value="Indian">Indian</option>
+                            <option value="Chinese">Chinese</option>
+                        </select>
+                    </div>
+                    <div class="filter__control">
+                        <label for="prepTime">Prep Time:</label>
+                        <select class="form-control" id="prepTime" name="prepTime">
+                            <option value="">Any</option>
+                            <option value="15">Up to 15 mins</option>
+                            <option value="30">Up to 30 mins</option>
+                            <option value="45">Up to 45 mins</option>
+                            <option value="60">Up to 60 mins</option>
+                        </select>
+                    </div>
+                    <div class="filter__control">
+                        <label for="diet">Diet:</label>
+                        <select class="form-control" id="diet" name="diet">
+                            <option value="">None</option>
+                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="Non-Vegetarian">Non-Vegetarian</option>
+                            <option value="Gluten-Free">Gluten-Free</option>
+                        </select>
+                    </div>
+                    <button id="submitBtn" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+        <div id="recipeCards" class="row mt-4"></div>
+    </div>
+
+    <div id="favoriteRecipes" class="container mt-4">
+        <h2 class="headName">Favorite Recipes</h2>
+        <div id="favoriteRecipeCards" class="row mt-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
